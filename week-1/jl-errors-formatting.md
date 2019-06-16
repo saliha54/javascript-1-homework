@@ -17,6 +17,7 @@ broken code:
 let a = 1:
 ```
 error message:
+Uncaught SyntaxError: Unexpected token :
 ```
 ```
 classification:
