@@ -10,7 +10,7 @@
 | :seedling: __[varibales: swaps](./jl-variables-swaps.md)__ | | | | |
 | :dash: __[variables: multiple assignments](./jl-variables-multiple.md)__ | | | | |
 | :seedling: __[how functions work](./jl-functions.md)__ | | | | |
-| :dash: __[functions: turtle shuffle](./jl-turtle-shuffle.md)__ | | | | |
+| :dash: __[functions: turtle shuffle](./jl-turtle-shuffle.md)__ | a| b| c| d|
 
 ---
 
