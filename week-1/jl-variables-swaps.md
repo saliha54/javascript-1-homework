@@ -22,7 +22,10 @@ b=_;
 ```
 1. [the second](https://goo.gl/KvayUU)
 ```js
-// your solution here
+_=a;
+a=b;
+b=c;
+c=_;
 ```
 1. [the third](https://goo.gl/WXXtV7)
 ```js
