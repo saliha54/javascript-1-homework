@@ -204,63 +204,178 @@ var result =  myAdjective + " " + myNoun + " " + myVerb + " " + myAdverb;
 var str = wordBlanks("dog", "big", "ran", "quickly");
 console.log(str) == big dog ran quickly
 ```
-## 36. 
+## 36. Store Multiple Values in one Variable using JavaScript Arrays
+```js
+var myArray = ["aa",2];
+var s = myArray[0]; == "aa"
+
+```
+## 37. Nest one Array within Another Array
+```js
+var myArray = [["a",1],["b",2]];
+var s = myArray[0][0]; == "a"
+```
+## 38. Access Array Data with Indexes
+```js
+var myData = myArray[0];
+```
+## 39. Modify Array Data With Indexes
+```js
+myArray[0] = 45;
+```
+## 40. Access Multi-Dimensional Arrays With Indexes
+```js
+var myArray = [[1,2,3], [4,5,6], [7,8,9], [[10,11,12], 13, 14]];
+var myData = myArray[2][1]; == 8
+```
+## 41. Manipulate Arrays With push()
+```js
+adds to end
+myArray.push(["dog",3]);
+```
+## 42. Manipulate Arrays With pop()
+```js
+removes from end
+var removedFromMyArray = myArray.pop();
+console.log(removedFromMyArray); == [cat,2]
+```
+## 43. Manipulate Arrays With shift()
+```js
+removes from start
+var removedFromMyArray = myArray.shift();
+console.log(removedFromMyArray); == [John,23]
+
+```
+## 44. Manipulate Arrays With unshift()
+```js
+adds to start
+myArray.unshift(["Paul",35]);
+console.log(myArray); == Paul,35,dog,3
+
+```
+## 45. Shopping List
+```js
+var myList = [["tomato",2],["choco", 3],["lemon", 3],["berry", 6],["ice",6]];
+```
+## 46. Write Reusable JavaScript with Functions
+```js
+function reusableFunction(){
+    console.log("Hi World");
+}
+reusableFunction();
+```
+## 47. Passing Values to Functions with Arguments
+```js
+function functionWithArgs (a,b){
+  console.log(a+b);
+}
+functionWithArgs(9,8); == 17
+```
+## 48. Global Scope and Functions
+```js
+var myGlobal = 10
+
+function fun1() {
+  oopsGlobal = 5 
+}                 // myGlobal = 10 fun1()-> oopsGlobal thus no reference error
+
+but
+
+oopsGlobal =5 // ReferenceError: oopsGlobal is not defined
+```
+## 49. Local Scope and Functions
+```js
+function myLocalScope() {
+  var myVar = 'use strict'; // you shouldn't need to edit this line
+  
+  console.log(myVar);
+}
+myLocalScope();
+//deleted console.log(myVar); defined outside the function
+```
+## 50. Global vs. Local Scope in Functions
+```js
+// Setup
+var outerWear = "T-Shirt";
+
+function myOutfit() {
+  // Only change code below this line
+  
+  outerWear = "sweater"
+  
+  // Only change code above this line
+  return outerWear;
+}
+```
+## 51. Return a Value from a Function with Return
+```js
+function timesFive(num){
+  return num*5;
+}
+console.log(timesFive(4)); == 20
+```
+## 52. Understanding Undefined Value returned from a Function
+
 ```js
 
 ```
-## 37. 
+## 
 ```js
 
 ```
-## 38. 
+## 
 ```js
 
 ```
-## 39. 
+## 
 ```js
 
 ```
-## 40. 
+## 
 ```js
 
 ```
-## 41. 
+## 
 ```js
 
 ```
-## 42. 
+## 
 ```js
 
 ```
-## 43. 
+## 
 ```js
 
 ```
-## 44. 
+## 
 ```js
 
 ```
-## 45. 
+## 
 ```js
 
 ```
-## 46. 
+## 
 ```js
 
 ```
-## 47. 
+## 
 ```js
 
 ```
-## 48. 
+## 
 ```js
 
 ```
-## 49. 
+## 
 ```js
 
 ```
-## 50. 
+## 
+```js
+
+```
+## 
 ```js
 
 ```
