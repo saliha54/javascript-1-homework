@@ -176,7 +176,7 @@ some exercises to help you understand functions:
 ```js
 {  // 7
    function f(param_1, param_2, param_3) {
-    var result = param_3 + param_2 + param_1;
+    var result = param_3 + param_1 + param_2;
     return result;
    };
 
