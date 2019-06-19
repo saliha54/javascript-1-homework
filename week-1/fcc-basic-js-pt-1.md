@@ -315,45 +315,112 @@ function timesFive(num){
 console.log(timesFive(4)); == 20
 ```
 ## 52. Understanding Undefined Value returned from a Function
-
 ```js
-
+function addFive() {
+  sum +=5;
+}
+var returnedValue = addFive();
+ // sum=5 returnedValue=undefined
 ```
-## 
+## 53. Assignment with a Returned Value
 ```js
-
+function processArg(num) {
+  return (num + 3) / 5;
+}
+processed = processArg(7);
+console.log(processed); == 2
 ```
-## 
+## 54. Stand in Line
 ```js
+function nextInLine(arr, item) {
+  // Your code here
+  arr.push(item);
+  return arr.shift();
+}
 
+// Test Setup
+var testArr = [1,2,3,4,5];
+
+// Display Code
+console.log("Before: " + JSON.stringify(testArr));
+console.log(nextInLine(testArr, 6)); // Modify this line to test
+console.log("After: " + JSON.stringify(testArr));
+--- 
+Before: [1,2,3,4,5]
+1
+After: [2,3,4,5,6]
 ```
-## 
+## 55. Understanding Boolean Values
 ```js
-
+function welcomeToBooleans() {
+return true; 
+}
 ```
-## 
+## 56. Use Conditional Logic with If Statements
 ```js
+function trueOrFalse(wasThatTrue) {
+    if(wasThatTrue) {
+        return "Yes, that was true"
+    }
+    return "No, that was false"
 
+}
+console.log(trueOrFalse(true)); == Yes, that was true
+console.log(trueOrFalse(false)); == No, that was false
 ```
-## 
+## 57. Comparison with the Equality Operator
 ```js
-
+function testEqual(val) {
+  if (val==12) { 
+    return "Equal";
+  }
+  return "Not Equal";
+}
+console.log(testEqual(10)); == Not Equal
+console.log(testEqual(12)); == Equal
 ```
-## 
+## 58. Comparison with the Strict Equality Operator
 ```js
-
+function testStrict(val) {
+  if (val === 7) { 
+    return "Equal";
+  }
+  return "Not Equal";
+}
+console.log(testStrict(7)); == Equal
+console.log(testStrict('7')); == Not Equal
 ```
-## 
+## 59. Practice comparing different values
 ```js
-
+function compareEquality(a, b) {
+  if (a === b) { // Change this line
+    return "Equal";
+  }
+  return "Not Equal";
+}
 ```
-## 
+## 60. Comparison with the Inequality Operator
 ```js
-
+function testNotEqual(val) {
+  if (val != 99 ) { // Change this line
+    return "Not Equal";
+  }
+  return "Equal";
+}
 ```
-## 
+## 61. Comparison with the Strict Inequality Operator
 ```js
+function testStrictNotEqual(val) {
+  // Only Change Code Below this Line
+  
+  if (val !== 17) {
 
+  // Only Change Code Above this Line
+
+    return "Not Equal";
+  }
+  return "Equal";
+}
 ```
 ## 
 ```js
