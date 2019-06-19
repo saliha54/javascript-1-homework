@@ -22,13 +22,20 @@ let result = getNine();
 ```
 error message:
 ```
+SyntaxError: Unexpected token {
 ```
 classification:
-* creation phase or execution phase ?
-* syntax or semanitc ?
+* execution phase ?
+* syntax
 
 the fix:
 ```js
+function getNine() {
+  let x = 6;
+  let y = 3;
+  return x + y;
+}
+let result = getNine();
 ```
 your notes:
 
@@ -45,13 +52,15 @@ array.length()
 ```
 error message:
 ```
+TypeError: array.length is not a function
 ```
 classification:
-* creation phase or execution phase ?
-* syntax or semanitc ?
+* execution phase 
+* syntax
 
 the fix:
 ```js
+array.length;
 ```
 your notes:
 
