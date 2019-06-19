@@ -556,3 +556,126 @@ function golfScore(par, strokes) {
   return names[6];
 }
 ```
+## 73. Selecting from Many Options with Switch Statements
+```js
+switch(val){
+    case 1:
+      answer = "alpha";
+      break;
+    case 2:
+      answer = "beta";
+      break;
+    case 3:
+      answer = "gamma";
+      break;
+    case 4:
+      answer = "delta";
+      break;
+  
+}
+```
+## 74. Adding a Default Option in Switch Statements
+```js
+switch(val){
+    case "a":
+      answer = "apple";
+      break;
+    case "b":
+      answer = "bird";
+      break;
+    case "c":
+      answer = "cat";
+      break;
+    default:
+      answer = "stuff";
+      break;
+  }
+```
+## 75. Multiple Identical Options in Switch Statements
+```js
+ switch (val) {
+    case 1:
+    case 2:
+    case 3:
+      answer = "Low";
+      break;
+    case 4:
+    case 5:
+    case 6:
+      answer = "Mid";
+      break;
+    case 7:
+    case 8:
+    case 9:
+      answer = "High";
+      break;
+  }
+```
+
+## 76. Replacing If Else Chains with Switch
+```js
+ switch (val){
+    case "bob":
+      answer = "Marley";
+      break;
+    case 42:
+     answer = "The Answer";
+    break;
+    case 1:
+    answer = "There is no #1";
+    break;
+    case 99:
+     answer = "Missed me by this much!";
+    break;
+    case 7:
+     answer = "Ate Nine";
+    break;
+  }
+```
+
+## 77. Returning Boolean Values from Functions
+```js
+function isLess(a, b) {
+ return a<b;
+}
+```
+
+## 78. Return Early Pattern for Functions
+```js
+if (a < 0 || b < 0)
+    return undefined;
+```
+
+## 79. Counting Cards
+```js
+switch(card){
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+      count+= 1;
+      if (count > 0)
+        return count + " Bet";
+      else
+        return count + " Hold";
+    case 7:
+    case 8:
+    case 9:
+      if (count > 0)
+        return count + " Bet";
+      else
+        return count + " Hold";
+    case 10:
+    case 'J':
+    case 'Q':
+    case 'K':
+    case 'A':
+      count-= 1;
+      if (count > 0)
+        return count + " Bet";
+      else
+        return count + " Hold";
+  }
+```
+
