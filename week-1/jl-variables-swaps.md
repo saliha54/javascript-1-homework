@@ -46,7 +46,12 @@ c=_;
 ```
 1. [the fifth](https://goo.gl/gDaKNi)
 ```js
-// your solution here
+_ = a;
+a = e;
+e = _;
+_ = b;
+b = d;
+d = _;
 ```
 
 ___
