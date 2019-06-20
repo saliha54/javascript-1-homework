@@ -58,7 +58,7 @@ some trickier function exercises before moving on.
     result = the_start + _1 + _2 + _3;
     return result;
   }
-  const return_val = turtle(/* write some arguments */);
+  const return_val = turtle("t","l","e");
   console.assert(return_val === 'turtle', "1: return_val === " + return_val);
 };
 ```
@@ -75,7 +75,7 @@ some trickier function exercises before moving on.
     result = the_start + _1 + _2 + the_end;
     return result;
   }
-  const return_val = turtle(/* write some arguments */);
+  const return_val = turtle("r","t");
   console.assert(return_val === 'turtle', "2: return_val === " + return_val);
 };
 ```
@@ -89,7 +89,7 @@ some trickier function exercises before moving on.
     var result = "t" + _1 + "r" + _2;
     return result;
   }
-  const return_val = turtle(/* write some arguments */);
+  const return_val = turtle("u","tle");
   console.assert(return_val === 'turtle', "3: return_val === " + return_val);
 };
 ```
@@ -103,10 +103,10 @@ some trickier function exercises before moving on.
     var result = "t" + _2 + "r" + _1 + _3;
     return result;
   }
-  const return_val_1 = turtle(/* write some arguments */);
+  const return_val_1 = turtle("t","u","le");
   console.assert(return_val_1 === 'turtle', "5: return_val_1 === " + return_val_1);
 
-  const return_val_2 = turtle(/* write some arguments */);
+  const return_val_2 = turtle("tl","u","e");
   console.assert(return_val_2 === 'turtle', "4: return_val_2 === " + return_val_2);
 };
 ```
@@ -120,22 +120,22 @@ some trickier function exercises before moving on.
     var result = _1 + _2 + _3;
     return result;
   }
-  const return_val_1 = turtle(/* write some arguments */);
+  const return_val_1 = turtle("t","u","rtle");
   console.assert(return_val_1 === 'turtle', "5: return_val_1 === " + return_val_1);
 
-  const return_val_2 = turtle(/* write some arguments */);
+  const return_val_2 = turtle("t","ur","tle");
   console.assert(return_val_2 === 'turtle', "5: return_val_2 === " + return_val_2);
 
-  const return_val_3 = turtle(/* write some arguments */);
+  const return_val_3 = turtle("t","urt","le");
   console.assert(return_val_3 === 'turtle', "5: return_val_3 === " + return_val_3);
 
-  const return_val_4 = turtle(/* write some arguments */);
+  const return_val_4 = turtle("t","urtl","e");
   console.assert(return_val_4 === 'turtle', "5: return_val_4 === " + return_val_4);
 
-  const return_val_5 = turtle(/* write some arguments */);
+  const return_val_5 = turtle("tu","r","tle");
   console.assert(return_val_5 === 'turtle', "5: return_val_5 === " + return_val_5);
 
-  const return_val_6 = turtle(/* write some arguments */);
+  const return_val_6 = turtle("tu","rt","le");
   console.assert(return_val_6 === 'turtle', "5: return_val_6 === " + return_val_6);
 };
 ```
