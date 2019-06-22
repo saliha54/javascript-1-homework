@@ -2,15 +2,15 @@
 
 |  | your Emoji | your comments | coach emoji | coach comments |
 | --- | --- | --- | --- | --- |
-| :seedling: __[fcc basics](./fcc-basic-js-pt-1.md)__: through ```Counting Cards``` |:white_check_mark: | | | |
-| :dash: __[fcc debugging](./fcc-debugging.md)__ | :wavy_dash:| | | |
-| :seedling: __[errors: formatting](./jl-errors-formatting.md)__ |:white_check_mark: | | | |
-| :seedling: __[errors: primitives](./jl-errors-primitive-types.md)__ | :white_check_mark:| | | |
-| :seedling: __[errors: variables](./jl-errors-variables.md)__ | :white_check_mark:| | | |
-| :seedling: __[varibales: swaps](./jl-variables-swaps.md)__ |:white_check_mark: | | | |
-| :dash: __[variables: multiple assignments](./jl-variables-multiple.md)__ |:white_check_mark: | | | |
-| :seedling: __[how functions work](./jl-functions.md)__ | :white_check_mark:| | | |
-| :dash: __[functions: turtle shuffle](./jl-turtle-shuffle.md)__ |:white_check_mark: | | | |
+| :seedling: __[fcc basics](./fcc-basic-js-pt-1.md)__: through ```Counting Cards``` |:white_check_mark: | | :white_check_mark: | |
+| :dash: __[fcc debugging](./fcc-debugging.md)__ | :wavy_dash:| | :white_check_mark: | |
+| :seedling: __[errors: formatting](./jl-errors-formatting.md)__ |:white_check_mark: | | :white_check_mark: | |
+| :seedling: __[errors: primitives](./jl-errors-primitive-types.md)__ | :white_check_mark:| | :white_check_mark: | |
+| :seedling: __[errors: variables](./jl-errors-variables.md)__ | :white_check_mark:| | :white_check_mark: |  it's creation phase. you can tell because 1: python-tutor doesn't move to the step-through page. 2: it's a syntax error, there are no execution phase syntax errors |
+| :seedling: __[varibales: swaps](./jl-variables-swaps.md)__ |:white_check_mark: | | :white_check_mark: | |
+| :dash: __[variables: multiple assignments](./jl-variables-multiple.md)__ |:white_check_mark: | | :white_check_mark: | |
+| :seedling: __[how functions work](./jl-functions.md)__ | :white_check_mark:| | :white_check_mark: | |
+| :dash: __[functions: turtle shuffle](./jl-turtle-shuffle.md)__ |:white_check_mark: | | :white_check_mark: | |
 
 ---
 
