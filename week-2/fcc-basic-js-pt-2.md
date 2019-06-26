@@ -456,9 +456,57 @@ function randomWholeNum() {
 ```
 ## 103. Generate Random Whole Numbers within a Range
 ```js
+function randomRange(myMin, myMax) {
+
+  return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+}
+```
+## 104. Use the parseInt Function
+```js
+function convertToInteger(str) {
+  return parseInt(str);
+}
+
+convertToInteger("56");
+```
+## 105. Use the parseInt Function with a Radix
+```js
+function convertToInteger(str) {
+  return parseInt(str, 2);
+}
+
+console.log(convertToInteger("10011")); // 19
+```
+## 106. Use the Conditional (Ternary) Operator
+```js
+function checkEqual(a, b) {
+  return a==b ? true : false;
+}
+
+checkEqual(1, 2);
+```
+## 107. Use Multiple Conditional (Ternary) Operators
+```js
+function checkSign(num) {
+  return num == 0 ? "zero" : num > 0 ? "positive" : "negative";
+}
+
+checkSign(10);
+```
+## 
+```js
 
 ```
 ## 
 ```js
 
 ```
+## 
+```js
+
+```
+## 
+```js
+
+```
+
