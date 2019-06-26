@@ -493,20 +493,3 @@ function checkSign(num) {
 
 checkSign(10);
 ```
-## 
-```js
-
-```
-## 
-```js
-
-```
-## 
-```js
-
-```
-## 
-```js
-
-```
-
