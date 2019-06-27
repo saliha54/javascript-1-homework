@@ -19,13 +19,16 @@ const = 5;
 ```
 error message:
 ```js
+SyntaxError: Unexpected token =
+Read this list of UNSUPPORTED FEATURES
 ```
 classification:
-* creation phase or execution phase ?
-* syntax or semanitc ?
+* creation phase
+* syntax
 
 the fix:
 ```js
+const five = 5;
 ```
 your notes:
 
@@ -43,13 +46,16 @@ a = 0;
 ```
 error message:
 ```
+TypeError: Assignment to constant variable.
 ```
 classification:
-* creation phase or execution phase ?
-* syntax or semanitc ?
+* execution phase
+* semanitc 
 
 the fix:
 ```js
+var a = 9;
+a = 0;
 ```
 your notes:
 
@@ -67,13 +73,16 @@ a = 0;
 ```
 error message:
 ```
+SyntaxError: Missing initializer in const declaration
+Read this list of UNSUPPORTED FEATURES
 ```
 classification:
-* creation phase or execution phase ?
-* syntax or semanitc ?
+* creation phase
+* syntax
 
 the fix:
 ```js
+const a = 0;
 ```
 your notes:
 
