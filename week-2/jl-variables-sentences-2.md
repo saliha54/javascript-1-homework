@@ -20,9 +20,69 @@ See how few reassignments you can use per step!
 
 ### challenges: 
 1. [the toad reads me](https://goo.gl/4eqhLb)
+```js
+// the
+_1="t", _2="h", _3="e"; 
+// toad
+x = _3;
+_2="o", _3="a", _4="d";
+// reads
+_1="r", _2=x, _5="s";
+// me
+_1="m", _3=_4=_5=" ";
+```
 1. [eating meat every meal](https://goo.gl/F9Njwp)
+```js
+// eating
+_1="e", _2="a", _3="t", _4="i", _5="n", _6="g";
+// meat
+_2=_1, _3=_2, _4=_3, _1=m, _5=_6=" ";
+
+// every
+x=_1; y=_3;
+_1=_3=_2, _2="v", _4="r", _5="y";
+
+// meal
+_1=x, _2=_1, _3=y, _4="l", _5=_6=" ";
+
+```
 1. [many men may melt my mind](http://www.pythontutor.com/javascript.html#code=//%20many%20men%20may%20melt%20my%20mind%0A%0A//%20we%20give%20you%20this%0Alet%20_1%20%3D%20'%20',%20_2%20%3D%20'%20',%20_3%20%3D%20'%20',%20_4%20%3D%20'%20'%3B%0Alet%20x,%20y%3B%0A//%20--%20you%20write%20this%20--%0A%0A//%20many%0A%0A//%20men%0A%0A//%20may%0A%0A//%20melt%0A%0A//%20my%0A%0A//%20mind&mode=edit&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
+```js
+// many
+_1="m", _2="a", _3="n", _4="y";
+// men
+x=_4; y=_2;
+_2="e", _4=" ";
+// may
+_3=x, x=_2, _2=y;
+// melt
+y=_3, _2=x, _3="l", _4="t";
+// my
+_2=y, _3=_4=" ";
+// mind
+_2="i", _3="n", _4="d";
+
+
+```
 1. [if fir trees ever fall](https://goo.gl/BCC6pz)
+```js
+// if
+10	_1="i", _2="f";
+11	
+12	// fir
+13	x=_2;
+14	_2=_1, _1=x, _3="r";
+15	
+16	// trees
+17	_1="t", _2=_3, _3=_4="e", _5="s";
+18	
+19	// ever
+20	_1=_3, _4=_2, _2="v", _5=" ";
+21	
+22	// fall
+23	_1=x, _2="a", _3=_4="l", _5=" ";
+
+```
 
 
 ___
