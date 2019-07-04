@@ -2,8 +2,8 @@
 
 |  | your Emoji | your comments | coach emoji | coach comments |
 | --- | --- | --- | --- | --- |
-| :seedling: finish FCC basics | | | | |
-| :seedling: finish FCC data structures | | | | |
+| :seedling: finish FCC basics | :white_check_mark: | last weeks hw | | |
+| :seedling: finish FCC data structures | :white_check_mark:| last weeks hw | | |
 | :dash: [javascript.info: logical operators](./jsinfo-logical-operators.md) | | | | |
 | :dash: [javascript.info: conditionals](./jsinfo-conditionals.md) | | | | |
 | :fire: [janke: test cases](./jl-test-cases.md) | | | | |
