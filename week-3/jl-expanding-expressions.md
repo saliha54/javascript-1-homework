@@ -358,7 +358,11 @@ test_cases = [
   {name: 'null, null', args: [null, null], expected: null},
 ];
 function expression(a, b) {
-  return typeof a === typeof b;
+  // return typeof a === typeof b;
+  const op_1 = typeof a;
+  const op_2 = typeof b;
+  const op_3 = op_1 === op_2;
+  return  op_3;
 }
 run_tests(expression, test_cases);
 ```
@@ -373,7 +377,11 @@ test_cases = [
   {name: 'null, null', args: [null, null], expected: null},
 ];
 function expression(a, b) {
-  return Boolean(a) !== Boolean(b);
+  // return Boolean(a) !== Boolean(b);
+  const op_1 = Boolean(a);
+  const op_2 = Boolean(b);
+  const op_3 = op_1 !== op_2;
+  return  op_3;
 }
 run_tests(expression, test_cases);
 ```
@@ -388,7 +396,12 @@ test_cases = [
   {name: 'null, null', args: [null, null], expected: null},
 ];
 function expression(a, b) {
-  return Boolean(b) === Boolean(Number(a));
+  // return Boolean(b) === Boolean(Number(a));
+  const op_1 = Boolean(b);
+  const op_2 = Number(a);
+  const op_3 = Boolean(op_2);
+  const op_4 = op_1 === op_3;
+  return  op_4;
 }
 run_tests(expression, test_cases);
 ```
@@ -409,7 +422,11 @@ test_cases = [
   {name: 'null, null', args: [null, null], expected: null},
 ];
 function expression(a, b) {
-  return !(a && !b);
+  // return !(a && !b);
+  const op_1 = !b;
+  const op_2 = a && op_1;
+  const op_3 = !op_2;
+  return  op_3;
 }
 run_tests(expression, test_cases);
 ```
@@ -425,7 +442,13 @@ test_cases = [
   {name: 'null, null', args: [null, null], expected: null},
 ];
 function expression(a, b) {
-  return !!a || !!b;
+  // return !!a || !!b;
+  const op_1 = !a;
+  const op_2 = !op_1;
+  const op_3 = !b;
+  const op_4 = !op_3;
+  const op_5 = op_2 || op_4;
+  return  op_5;
 }
 run_tests(expression, test_cases);
 ```
@@ -441,7 +464,11 @@ test_cases = [
   {name: 'null, null, null', args: [null, null, null], expected: null},
 ];
 function expression(a, b, c) {
-  return a || b && c || a;
+  // return a || b && c || a;
+  const op_1 = b && c;
+  const op_2 = a || op_1;
+  const op_3 = op_2 || a;
+  return  op_3;
 }
 run_tests(expression, test_cases);
 ```
@@ -461,7 +488,11 @@ test_cases = [
   {name: 'null, null, null', args: [null, null, null], expected: null},
 ];
 function expression(a, b, c) {
-  return -(a + b) * c;
+  // return -(a + b) * c;
+  const op_1 = a+b;
+  const op_2 = op_1*c;
+  const op_3 = -op_2;
+  return  op_3;
 }
 run_tests(expression, test_cases);
 ```
@@ -477,7 +508,11 @@ test_cases = [
   {name: 'null, null, null', args: [null, null, null], expected: null},
 ];
 function expression(a, b, c) {
-  return a ** b / +c;
+  // return a ** b / +c;
+  const op_1 = a**b;
+  const op_2 = +c;
+  const op_3 = op_1/op_2;
+  return  op_3;
 }
 run_tests(expression, test_cases);
 ```
@@ -494,7 +529,12 @@ test_cases = [
   {name: 'null, null, null', args: [null, null, null], expected: null},
 ];
 function expression(a, b, c) {
-  return b % c - a ** c / b;
+  // return b % c - a ** c / b;
+  const op_1 = b%c;
+  const op_2 = a**c;
+  const op_3 = op_2/b;
+  const op_4 = op_1 - op_3;
+  return  op_4;
 }
 run_tests(expression, test_cases);
 ```
@@ -514,7 +554,12 @@ test_cases = [
   {name: 'null, null', args: [null, null], expected: null},
 ];
 function expression(a, b) {
-  return a % b || !!a;
+  // return a % b || !!a;
+  const op_1 = a%b;
+  const op_2 = !a;
+  const op_3 = !op_2;
+  const op_4 = op_1 || op_3;
+  return  op_4;
 }
 run_tests(expression, test_cases);
 ```
@@ -531,7 +576,11 @@ test_cases = [
   {name: 'null, null', args: [null, null], expected: null},
 ];
 function expression(a, b) {
-  return typeof a === 'number' + a;
+  // return typeof a === 'number' + a;
+  const op_1 = typeof a;
+  const op_2 = 'number'+a;
+  const op_3 = op_1 === op_2;
+  return  op_3;
 }
 run_tests(expression, test_cases);
 ```
@@ -546,7 +595,13 @@ test_cases = [
   {name: 'null', args: [null], expected: null},
 ];
 function expression(a) {
-  return !!+a === Boolean(a);
+  // return !!+a === Boolean(a);
+  const op_1 = Boolean(a);
+  const op_2 = +a;
+  const op_3 = !op_2;
+  const op_4 = !op_3;
+  const op_5 = op_4 === op_1;
+  return  op_5;
 }
 run_tests(expression, test_cases);
 ```
