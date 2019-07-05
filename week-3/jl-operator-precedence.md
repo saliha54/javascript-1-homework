@@ -206,23 +206,23 @@ __learning objectives__
 ```js
 {
   /* values to try
-    "", " ", true, false, undefined, null, 0, 1, -1, NaN, Infinity
-  */
-  const a = , b = ;
+  "", " ", true, false, undefined, null, 0, 1, -1, NaN, Infinity
+*/
+const a = "" , b = 0 ;
 
-  const expected = typeof a === typeof b;
+const expected = typeof a === typeof b;
 
-  let op_1;
-  let step_1;
-  console.assert(step_1 === expected, "step_1");
+const op_1 = typeof a ;
+const step_1 = op_1 === typeof b ;
+console.assert(step_1 === expected, "step_1");
 
-  let op_2;
-  let step_2;
-  console.assert(step_2 === expected, "step_2");
+const op_2 = typeof b;
+const step_2 = op_1 === op_2;
+console.assert(step_2 === expected, "step_2");
 
-  let op_3;
-  let step_3;
-  console.assert(step_3 === expected, "step_3");
+const op_3 = op_1 === op_2;
+const step_3 = op_3;
+console.assert(step_3 === expected, "step_3");
 }
 ```
 
@@ -234,23 +234,23 @@ __learning objectives__
 ```js
 {
   /* values to try
-    "", " ", true, false, undefined, null, 0, 1, -1, NaN, Infinity
-  */
-  const a = , b = ;
+  "", " ", true, false, undefined, null, 0, 1, -1, NaN, Infinity
+*/
+const a = 0, b = -1 ;
 
-  const expected = Boolean(a) !== Boolean(b);
+const expected = Boolean(a) !== Boolean(b);
 
-  let op_1;
-  let step_1;
-  console.assert(step_1 === expected, "step_1");
+const op_1 = Boolean(a);
+const step_1 = op_1 !== Boolean(b) ;
+console.assert(step_1 === expected, "step_1");
 
-  let op_2;
-  let step_2;
-  console.assert(step_2 === expected, "step_2");
+const op_2 = Boolean(b);
+const step_2 = op_1 !== op_2;
+console.assert(step_2 === expected, "step_2");
 
-  let op_3;
-  let step_3;
-  console.assert(step_3 === expected, "step_3"); 
+const op_3 = op_1 !== op_2;
+const step_3 = op_3 ;
+console.assert(step_3 === expected, "step_3");
 }
 ```
 
@@ -262,27 +262,27 @@ __learning objectives__
 ```js
 {
   /* values to try
-    "", " ", true, false, undefined, null, 0, 1, -1, NaN, Infinity
-  */
-  const a = , b = ;
+  "", " ", true, false, undefined, null, 0, 1, -1, NaN, Infinity
+*/
+const a = -1, b = 1;
 
-  const expected = Boolean(b) === Boolean(Number(a));
+const expected = Boolean(b) === Boolean(Number(a));
 
-  let op_1;
-  let step_1;
-  console.assert(step_1 === expected, "step_1");
+const op_1 = Number(a);
+const step_1 = Boolean(b) === Boolean(op_1) ;
+console.assert(step_1 === expected, "step_1");
 
-  let op_2;
-  let step_2;
-  console.assert(step_2 === expected, "step_2");
+const op_2 = Boolean(op_1);
+const step_2 = Boolean(b) === op_2;
+console.assert(step_2 === expected, "step_2");
 
-  let op_3;
-  let step_3;
-  console.assert(step_3 === expected, "step_3");
+const op_3 = Boolean(b);
+const step_3 = op_3 === op_2;
+console.assert(step_3 === expected, "step_3");
 
-  let op_4;
-  let step_4;
-  console.assert(step_4 === expected, "step_4");
+const op_4 = op_3 === op_2;
+const step_4 = op_4;
+console.assert(step_4 === expected, "step_4");
 }
 ```
 
@@ -300,23 +300,23 @@ __learning objectives__
 ```js
 {
   /* values to try
-    "", " ", true, false, undefined, null, 0, 1, -1, NaN, Infinity
-  */
-  const a = , b = ;
+  "", " ", true, false, undefined, null, 0, 1, -1, NaN, Infinity
+*/
+const a = null , b = false;
 
-  const expected = !(a && !b);
+const expected = !(a && !b);
 
-  let op_1;
-  let step_1;
-  console.assert(step_1 === expected, "step_1");
+const op_1 = !b;
+const step_1 = !(a && op_1) ;
+console.assert(step_1 === expected, "step_1");
 
-  let op_2;
-  let step_2;
-  console.assert(step_2 === expected, "step_2");
+const op_2 = a && op_1 ;
+const step_2 = !op_2;
+console.assert(step_2 === expected, "step_2");
 
-  let op_3;
-  let step_3;
-  console.assert(step_3 === expected, "step_3"); 
+const op_3 = !op_2;
+const step_3 = op_3 ;
+console.assert(step_3 === expected, "step_3");
 }
 ```
 
@@ -328,31 +328,31 @@ __learning objectives__
 ```js
 {
   /* values to try
-    "", " ", true, false, undefined, null, 0, 1, -1, NaN, Infinity
-  */
-  const a = , b = ;
+  "", " ", true, false, undefined, null, 0, 1, -1, NaN, Infinity
+*/
+const a = 0 , b = 1 ;
 
-  const expected = !!a || !!b;
+const expected = !!a || !!b;
 
-  let op_1;
-  let step_1;
-  console.assert(step_1 === expected, "step_1");
+const op_1 = !b;
+const step_1 = !!a || !op_1;
+console.assert(step_1 === expected, "step_1");
 
-  let op_2;
-  let step_2;
-  console.assert(step_2 === expected, "step_2");
+const op_2 = !op_1 ;
+const step_2 = !!a || op_2;
+console.assert(step_2 === expected, "step_2");
 
-  let op_3;
-  let step_3;
-  console.assert(step_3 === expected, "step_3"); 
+const op_3 = !a;
+const step_3 = !op_3 || op_2;
+console.assert(step_3 === expected, "step_3"); 
 
-  let op_4;
-  let step_4;
-  console.assert(step_4 === expected, "step_4");
+const op_4 = !op_3;
+const step_4 = op_4 || op_2;
+console.assert(step_4 === expected, "step_4");
 
-  let op_5;
-  let step_5;
-  console.assert(step_5 === expected, "step_5"); 
+const op_5 = op_4 || op_2;
+const step_5 = op_5;
+console.assert(step_5 === expected, "step_5");
 }
 ```
 
@@ -364,13 +364,25 @@ __learning objectives__
 ```js
 {
   /* values to try
-    "", " ", true, false, undefined, null, 0, 1, -1, NaN, Infinity
-  */
-  const a = , b = , c = ;
+  "", " ", true, false, undefined, null, 0, 1, -1, NaN, Infinity
+*/
+const a = 0, b = 1, c = null;
 
-  const expected = a || b && c || a;
+const expected = a || b && c || a;
 
-  // break down this expression
+// break down this expression
+
+const op_1 = b && c;
+const step_1 = a || op_1 || a;
+console.assert(step_1 === expected, "step_1");
+
+const op_2 = a || op_1 ;
+const step_2 = op_2 || a;
+console.assert(step_2 === expected, "step_2");
+
+const op_3 = op_2 || a;
+const step_3 = op_3;
+console.assert(step_3 === expected, "step_3"); 
 }
 ```
 [ast explorer](https://astexplorer.net/#/gist/bc0bac0e8559bf97071c9129a05a28f9/e5fcaa5df8317fb1a45ba1a7866733d96768c463)
@@ -392,21 +404,21 @@ __learning objectives__
 /* values to try
   0, 1, -1, NaN, Infinity, .5, -0.0, 1e3, 1e-3, 999e305, 999e306
 */
-const a = , b = , c = ;
+const a = .5, b = -0.0 , c = 1e-3 ;
 
 const expected = -(a + b) * c;
 
-let op_1;
-let step_1;
+const op_1 = a+b;
+const step_1 = -op_1*c;
 console.assert(step_1 === expected, "step_1");
 
-let op_2;
-let step_2;
+const op_2 = op_1*c;
+const step_2 = -op_2;
 console.assert(step_2 === expected, "step_2");
 
-let op_3;
-let step_3;
-console.assert(step_3 === expected, "step_3"); 
+const op_3 = -op_2;
+const step_3 = op_3 ;
+console.assert(step_3 === expected, "step_3");
 }
 ```
 [scientific notation](http://www.java2s.com/Tutorials/Javascript/Javascript_Tutorial/Data_Type/How_to_write_Scientific_notation_literal_in_Javascript.htm)
@@ -419,13 +431,25 @@ console.assert(step_3 === expected, "step_3");
 ```js
 {
   /* values to try
-    0, 1, -1, NaN, Infinity, .5, -0.0, 1e3, 1e-3, 999e305, 999e306
-  */
-  const a = , b = , c = ;
+  0, 1, -1, NaN, Infinity, .5, -0.0, 1e3, 1e-3, 999e305, 999e306
+*/
+const a = 999e305 , b = .5, c = 1e-3;
 
-  const expected = a ** b / +c;
+const expected = a ** b / +c;
 
-  // break down this expression 
+// break down this expression
+
+const op_1 = a**b;
+const step_1 = op_1/ +c;
+console.assert(step_1 === expected, "step_1");
+
+const op_2 = +c;
+const step_2 = op_1/op_2;
+console.assert(step_2 === expected, "step_2");
+
+const op_3 = op_1/op_2;
+const step_3 = op_3 ;
+console.assert(step_3 === expected, "step_3");
 }
 ```
 
@@ -437,13 +461,29 @@ console.assert(step_3 === expected, "step_3");
 ```js
 {
   /* values to try
-    0, 1, -1, NaN, Infinity, .5, -0.0, 1e3, 1e-3, 999e305, 999e306
-  */
-  const a = , b = , c = ;
+  0, 1, -1, NaN, Infinity, .5, -0.0, 1e3, 1e-3, 999e305, 999e306
+*/
+const a = 0 , b = .5 , c = -1 ;
 
-  const expected = b % c - a ** c / b;
+const expected = b % c - a ** c / b;
 
-  // break down this expression
+// break down this expression
+
+const op_1 = a**c;
+const step_1 = b % c - op_1/b;
+console.assert(step_1 === expected, "step_1");
+
+const op_2 = op_1/b;
+const step_2 = b%c - op_2;
+console.assert(step_2 === expected, "step_2");
+
+const op_3 = b%c;
+const step_3 = op_3 - op_2 ;
+console.assert(step_3 === expected, "step_3");
+
+const op_4 = op_3 - op_2;
+const step_4 = op_4;
+console.assert(step_4 === expected, "step_4");
 }
 ```
 
