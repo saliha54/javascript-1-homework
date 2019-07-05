@@ -501,18 +501,34 @@ console.assert(step_4 === expected, "step_4");
 ```js
 {
   /* values to try
-    0, 1, -1, NaN, Infinity, .5, -0.0, 1e3, 1e-3, 999e305, 999e306
-    0, 3
-    1, 3
-    2, 3
-    3, 3
-    4, 3
-  */
-  const a = , b = ;
+  0, 1, -1, NaN, Infinity, .5, -0.0, 1e3, 1e-3, 999e305, 999e306
+  0, 3
+  1, 3
+  2, 3
+  3, 3
+  4, 3
+*/
+const a = 4 , b = 3 ;
 
-  const expected = a % b || !!a;
+const expected = a % b || !!a;
 
-  // break down this expression
+// break down this expression
+
+const op_1 = !a;
+const step_1 = a%b || !op_1;
+console.assert(step_1 === expected, "step_1");
+
+const op_2 = !op_1;
+const step_2 = a%b || op_2;
+console.assert(step_2 === expected, "step_2");
+
+const op_3 = a%b;
+const step_3 = op_3 || op_2 ;
+console.assert(step_3 === expected, "step_3");
+
+const op_4 = op_3 || op_2;
+const step_4 = op_4;
+console.assert(step_4 === expected, "step_4");
 }
 ```
 
@@ -524,14 +540,27 @@ console.assert(step_4 === expected, "step_4");
 ```js
 {
   /* values to try
-    0, 1, -1, NaN, Infinity, .5, -0.0, 1e3, 1e-3, 999e305, 999e306
-    "", " ", true, false, undefined, null, 0, 1, -1, NaN, Infinity
-  */
-  const a = ;
+  0, 1, -1, NaN, Infinity, .5, -0.0, 1e3, 1e-3, 999e305, 999e306
+  "", " ", true, false, undefined, null, 0, 1, -1, NaN, Infinity
+*/
+const a = undefined;
 
-  const expected = typeof a === 'number' + a;
+const expected = typeof a === 'number' + a;
 
-  // break down this expression
+// break down this expression
+
+const op_1 = typeof a;
+const step_1 = op_1 === 'number' + a;
+console.assert(step_1 === expected, "step_1");
+
+const op_2 = 'number' + a;
+const step_2 = op_1 === op_2;
+console.assert(step_2 === expected, "step_2");
+
+const op_3 = op_1 === op_2;
+const step_3 = op_3 ;
+console.assert(step_3 === expected, "step_3");
+
 }
 ```
 
@@ -543,13 +572,33 @@ console.assert(step_4 === expected, "step_4");
 ```js
 {
   /* values to try
-    "", " ", true, false, undefined, null, 0, 1, -1, NaN, Infinity
-  */
-  const a = ;
+  "", " ", true, false, undefined, null, 0, 1, -1, NaN, Infinity
+*/
+const a = null;
 
-  const expected = !!+a === Boolean(a);
+const expected = !!+a === Boolean(a);
 
-  // break down this expression
+// break down this expression
+
+const op_1 = +a;
+const step_1 = !!op_1 === Boolean(a);
+console.assert(step_1 === expected, "step_1");
+
+const op_2 = !op_1;
+const step_2 = !op_2 === Boolean(a);
+console.assert(step_2 === expected, "step_2");
+
+const op_3 = !op_2;
+const step_3 = op_3 === Boolean(a) ;
+console.assert(step_3 === expected, "step_3");
+
+const op_4 = Boolean(a);
+const step_4 = op_3 === op_4;
+console.assert(step_4 === expected, "step_4");
+
+const op_5 = op_3 === op_4;
+const step_5 = op_5;
+console.assert(step_5 === expected, "step_5");
 }
 ```
 
