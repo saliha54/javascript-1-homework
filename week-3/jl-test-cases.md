@@ -313,7 +313,7 @@ Writing test cases just happens to be the other best way to understand how code 
       {name: 'NaN, undefined', args: [NaN, undefined], expected: undefined},   //gets the latter
       {name: 'NaN, null', args: [NaN, null], expected: null},   //gets the latter
       {name: '"a", "b"', args: ["a", "b"], expected: "a"},  //gets the first
-      {name: ', ', args: [0, 0], expected: 0},
+      {name: '"b","z"', args: ["b", "z"], expected: "b"},
       {name: 'true, true', args: [true, true], expected: true},
       {name: 'false, true', args: [false, true], expected: true},
       {name: 'true, false', args: [true, false], expected: true},
@@ -342,6 +342,16 @@ Writing test cases just happens to be the other best way to understand how code 
       {name: '1, 0', args: [1, 0], expected: 0},
       {name: '0, 0', args: [0, 0], expected: 0},
       /* write 10 more passing test cases */
+      {name: 'true, true', args: [true, true], expected: true},
+      {name: 'false, true', args: [false, true], expected: false},
+      {name: 'true, false', args: [true, false], expected: false},
+      {name: 'false, false', args: [false, false], expected: false},
+      {name: '"first", "last"', args: ["first", "last"], expected: "last"},
+      {name: '4, 10', args: [4, 10], expected: 10},
+      {name: '10, 4', args: [10, 4], expected: 4},
+      {name: 'NaN, undefined', args: [NaN, undefined], expected: NaN},
+      {name: 'null, NaN', args: [null, NaN], expected: null},
+      {name: 'NaN, null', args: [NaN, null], expected: NaN}
     ];
   function and(a, b) {
     return a && b;
@@ -361,6 +371,16 @@ Writing test cases just happens to be the other best way to understand how code 
       {name: '1', args: [1], expected: false},
       {name: '0', args: [0], expected: true},
       /* write 10 more passing test cases */
+      {name: 'true', args: [true], expected: false},
+      {name: 'false', args: [false], expected: true},
+      {name: '5', args: [5], expected: false},
+      {name: 'null', args: [null], expected: true},
+      {name: '"abc"', args: ["abc"], expected: false},
+      {name: 'NaN', args: [NaN], expected: true},
+      {name: 'Infinity', args: [Infinity], expected: false},
+      {name: 'undefined', args: [undefined], expected: true},
+      {name: '-Inifinity', args: [-Infinity], expected: false},
+      {name: '-0', args: [-0], expected: true}
     ];
   function not(a) {
     return !a;
@@ -380,7 +400,18 @@ Writing test cases just happens to be the other best way to understand how code 
       {name: '1, "x", "y"', args: [1, 'x', 'y'], expected: 'x'},
       {name: '0, "x", "y"', args: [0, 'x', 'y'], expected: 'y'},
       /* write 10 more passing test cases */
+      {name: 'true, "x", "y"', args: [true, 'x', 'y'], expected: 'x'},
+      {name: 'false, "x", "y"', args: [false, 'x', 'y'], expected: 'y'},
+      {name: '"false", "x", "y"', args: ["false", 'x', 'y'], expected: 'x'},
+      {name: '-8, "x", "y"', args: [-8, 'x', 'y'], expected: 'x'},
+      {name: '54, "x", "y"', args: [54, 'x', 'y'], expected: 'x'},
+      {name: 'null, "x", "y"', args: [null, 'x', 'y'], expected: 'y'},
+      {name: 'NaN, "x", "y"', args: [NaN, 'x', 'y'], expected: 'y'},
+      {name: 'undefined, "x", "y"', args: [undefined, 'x', 'y'], expected: 'y'},
+      {name: 'Infinity, "x", "y"', args: [Infinity, 'x', 'y'], expected: 'x'},
+      {name: '-Infinity, "x", "y"', args: [-Infinity, 'x', 'y'], expected: 'x'}
     ];
+    
   function ternary(a, b, c) {
     return a ? b : c ;
   }
@@ -406,8 +437,22 @@ rules for implicit coercion:
       {name: 'false, 0', args: [false, 0], expected: false},
       {name: 'false, 1', args: [false, 1], expected: false},
       /* write 4 more passing test cases with only strings */
-      /* write 6 more passing test cases without NaN values */
-      /* write 4 more passing test cases with NaN values */
+      {name: '"a", "b"', args: ["a", "b"], expected: false},
+      {name: '"abc", "b"', args: ["abc", "b"], expected: false},
+      {name: '"z", "b"', args: ["z", "b"], expected: true},
+      {name: '"bcd", "b"', args: ["bcd", "b"], expected: true},
+      /* write 6 more passing test cases without NaN values*/
+      {name: '"3", 3', args: ["3", 3], expected: true},
+      {name: '"3", 80', args: ["3", 80], expected: false},  //ascii numbers
+      {name: '3, 3', args: [3, 3], expected: false},
+      {name: '-Infinity, Infinity', args: [-Infinity, Infinity], expected: false},
+      {name: '-0, +0', args: [-0, +0], expected: false},
+      {name: '-1, 1', args: [-1, 1], expected: false},
+      /* write 4 more passing test cases with NaN values*/
+      {name: 'null, 1', args: [null, 1], expected: false},
+      {name: 'null, -1', args: [null, -1], expected: true},
+      {name: 'undefined, 1', args: [undefined, 1], expected: false},   // always false with undefined
+      {name: 'NaN, NaN', args: [NaN, NaN], expected: false}
     ];
   function greater_than(a, b) {
     return a > b;
@@ -434,8 +479,22 @@ rules for implicit coercion:
       {name: 'false, 0', args: [false, 0], expected: false},
       {name: 'false, 1', args: [false, 1], expected: true},
       /* write 4 more passing test cases with only strings */
+      {name: '"a", "b"', args: ["a", "b"], expected: true},
+      {name: '"abc", "b"', args: ["abc", "b"], expected: true},
+      {name: '"z", "b"', args: ["z", "b"], expected: false},
+      {name: '"bcd", "b"', args: ["bcd", "b"], expected: false},
       /* write 6 more passing test cases without NaN values*/
+      {name: '"3", 3', args: ["3", 3], expected: false},
+      {name: '"3", 80', args: ["3", 80], expected: true},  //ascii numbers
+      {name: '3, 3', args: [3, 3], expected: false},
+      {name: '-Infinity, Infinity', args: [-Infinity, Infinity], expected: true},
+      {name: '-0, +0', args: [-0, +0], expected: false},
+      {name: '-1, 1', args: [-1, 1], expected: true},
       /* write 4 more passing test cases with NaN values*/
+      {name: 'null, 1', args: [null, 1], expected: true},
+      {name: 'null, -1', args: [null, -1], expected: false},
+      {name: 'undefined, 1', args: [undefined, 1], expected: false},   // always false with undefined
+      {name: 'NaN, NaN', args: [NaN, NaN], expected: false}
     ];
   function less_than(a, b) {
     return a < b;
@@ -461,7 +520,17 @@ implicit coercion with all mathematical operators (except for +) is pretty simpl
       {name: 'false, 0', args: [false, 0], expected: 0},
       {name: 'false, 1', args: [false, 1], expected: -1},
       /* write 5 more passing test cases without NaN values*/
+      {name: '3, 1', args: [3, 1], expected: 2},
+      {name: '"3", "1"', args: ["3", "1"], expected: 2},
+      {name: '-0, 1', args: [-0, 1], expected: -1},
+      {name: '0, Infinity', args: [0, Infinity], expected: -Infinity},
+      {name: '2, "-5"', args: [2, "-5"], expected: 7},
       /* write 5 more passing test cases with NaN values*/
+      {name: 'Infinity, Infinity', args: [Infinity, Infinity], expected: NaN},
+      {name: 'null, 5', args: [null, 5], expected: -5},
+      {name: 'undefined, 5', args: [undefined, 5], expected: NaN},
+      {name: '"abc", 5', args: ["abc", 5], expected: NaN},
+      {name: '2, NaN', args: [2, NaN], expected: NaN}
     ];
   function subtraction(a, b) {
     return a - b;
