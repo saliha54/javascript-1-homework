@@ -8,7 +8,7 @@
 | :dash: [javascript.info: conditionals](./jsinfo-conditionals.md) | | | | |
 | :fire: [janke: test cases](./jl-test-cases.md) |:white_check_mark: | | | |
 | :fire: [janke: operator precedence](./jl-operator-precedence.md) |:white_check_mark: | | | |
-| :fire: [FCC: basic algorithms](./fcc-algorithms-1.md) | | | | |
+| :fire: [FCC: basic algorithms](./fcc-algorithms-1.md) |:white_check_mark: | | | |
 | :fire: [janke: expanding expressions](./jl-expanding-expressions.md) | | | | |
 | :fire: [janke: replicate ```==```](./jl-replicate-loose-equality.md) | | | | |
 | :fire: [janke: ref-type arguments](./jl-reference-type-arguments.md) | | | | |
