@@ -49,9 +49,9 @@ In JavaScript you can pass functions as arguments.  Since functions are referenc
 ```js
 {
   function sentence(param_1) {
-    var word_1 = param_1(/* fill this */);
-    var word_2 = param_1(/* fill this */);
-    var word_3 = param_1(/* fill this */);
+    var word_1 = param_1("t","e","a");
+    var word_2 = param_1("e","a","t");
+    var word_3 = param_1("a","t","e");
     return word_1 + word_2 + word_3;
   }
 
@@ -75,9 +75,9 @@ In JavaScript you can pass functions as arguments.  Since functions are referenc
 ```js
 {
   function sentence(param_1, param_2, param_3) {
-    var word_1 = param_1(/* fill this */);
-    var word_2 = param_2(/* fill this */);
-    var word_3 = param_3(/* fill this */);
+    var word_1 = param_1("t","e","a");
+    var word_2 = param_2("t","e","a");
+    var word_3 = param_3("t","a","e");
     return word_1 + word_2 + word_3;
   }
 
@@ -114,7 +114,7 @@ In JavaScript you can pass functions as arguments.  Since functions are referenc
   }
 
   function first(_1, _2, _3) {
-    return /* fill this */;
+    return _1 + _3 + _2;
   }
   function second(_1, _2, _3) {
     return /* fill this */;
