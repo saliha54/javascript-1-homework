@@ -114,13 +114,13 @@ In JavaScript you can pass functions as arguments.  Since functions are referenc
   }
 
   function first(_1, _2, _3) {
-    return _1 + _3 + _2;
+    return _3 + _2 + _1;
   }
   function second(_1, _2, _3) {
-    return /* fill this */;
+    return _3 + _2 + _1;
   }
   function third(_1, _2, _3) {
-    return /* fill this */;
+    return _3 + _1 + _2;
   }
 
   const result = sentence(first, second, third);
@@ -155,7 +155,7 @@ In JavaScript you can pass functions as arguments.  Since functions are referenc
     return _3 + _2 + _1;
   }
 
-  const result = sentence(/* fill this */);
+  const result = sentence(second, third, first);
 
   console.assert(result === 'eat ate tea', 'result === ' + result);
 }
