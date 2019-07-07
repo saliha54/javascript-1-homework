@@ -12,7 +12,7 @@
 | :fire: [janke: expanding expressions](./jl-expanding-expressions.md) | | | | |
 | :fire: [janke: replicate ```==```](./jl-replicate-loose-equality.md) | | | | |
 | :fire: [janke: ref-type arguments](./jl-reference-type-arguments.md) | | | | |
-| :fire: [janke: functions as arguments](./jl-functions-as-arguments.md) | | | | |
+| :fire: [janke: functions as arguments](./jl-functions-as-arguments.md) | :white_check_mark:  | | | |
 | :fire: [janke: callstack](./jl-callstack.md) | | | | |
 
 
